@@ -2,14 +2,15 @@
     <div class="row pricing-content">
 
         <div class="col-four pricing-intro">
-            <h1 class="intro-header" data-aos="fade-up">Our Pricing Options</h1>
+            <h1 class="intro-header" data-aos="fade-up">{{title|uppercase}}</h1>
 
 <div data-aos="fade-up" *ngIf="newsdata"> 
-<div *ngFor="let n of newsdata">
-{{n.title}}
+<div *ngFor="let n of newsdata|count:5">
+{{n.title|uppercase}}
 {{n.author}}
-{{n.description}}
-<img [src]="n.urlToImage"/>
+<img [src]="n.urlToImage" height="400px" width="400px"/>
+{{n.description|summery}}
+
 <hr/>
 </div>
 </div>

@@ -8,9 +8,25 @@
                 <h1 class="intro-header" data-aos="fade-up">About Our App</h1>
             </div>
             <div class="col-eight">
-                <p class="lead" data-aos="fade-up">
-                    Excepteur enim magna veniam labore veniam sint. Ex aliqua esse proident ullamco voluptate. Nisi nisi nisi aliqua eiusmod dolor dolor proident deserunt occaecat elit Lorem reprehenderit. Id culpa veniam ex aliqua magna elit pariatur do nulla. Excepteur enim magna veniam labore veniam sint.
-                </p>
+                <div class="lead" data-aos="fade-up">
+                   <table>
+<tr>
+    <th>Name></th>
+    <th>Mobile></th>
+    <th>Class></th>
+</tr>
+<tr *ngFor="let user of Users">
+<td>{{user.Name}}</td>
+<td>{{user.Mobile}}</td>
+<td>{{user.class}}</td>
+</tr>
+
+                   </table>
+
+
+
+                    
+                </div>
             </div>                       
             
         </div>

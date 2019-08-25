@@ -1,23 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import{HttpClient} from '@angular/common/http';
+
 import { from } from 'rxjs';
+import{UsersService} from '../services/users.service'
+
 @Component({
   selector: 'app-about-us',
   templateUrl: './about-us.component.html',
   styleUrls: ['./about-us.component.css']
 })
 export class AboutUsComponent implements OnInit {
-resData;
-newsData;
-  constructor(private http:HttpClient) { }
+public Users =[];
+  constructor(private user :UsersService) { }
 
   ngOnInit() {
-    const url="";
-    this.http.get(url).subscribe(res=>{
-      this.resData=res;
-      this.newsData=this.resData.articles;
-      console.log(this.newsData);
-    })
+    this.Users=this.user.getDetails();
+    }
   }
 
-}
+

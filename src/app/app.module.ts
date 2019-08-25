@@ -14,6 +14,12 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import{HttpClientModule} from '@angular/common/http';
 
+import { CountPipe } from './pipes/count.pipe';
+import { SummeryPipe } from './pipes/summery.pipe';
+import{UsersService} from  './services/users.service'
+
+
+
 
 @NgModule({
   declarations: [
@@ -26,6 +32,10 @@ import{HttpClientModule} from '@angular/common/http';
     OurAppComponent,
     FooterComponent,
     PagenotfoundComponent,
+    CountPipe,
+    SummeryPipe,
+ 
+  
   
   ],
   imports: [
@@ -34,7 +44,7 @@ import{HttpClientModule} from '@angular/common/http';
     BrowserAnimationsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
